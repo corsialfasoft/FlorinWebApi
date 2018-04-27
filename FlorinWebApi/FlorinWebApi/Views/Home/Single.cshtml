@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Singolo";
+}
+
+<h1>Singolo</h1>
+<div class="container">
+    <ul class="list-group"></ul>
+
+
+    @using(Html.BeginForm("AddCarrello","Home",FormMethod.Post)) {
+        <li> @ViewBag.Products.ID-@ViewBag.Products.Descr</li>
+        @Html.TextBox("Quantita",null,new { placeholder = "Quantita da ordinare" })
+        <input type="hidden" name="codice" value="@ViewBag.Products.ID" />
+
+
+
+        <input type="submit" value="AGGIUNGI AL CARRELLO" />
+    }
+    </ul>
+</div>

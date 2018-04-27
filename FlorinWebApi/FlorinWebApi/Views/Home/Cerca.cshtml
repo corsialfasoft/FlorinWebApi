@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "CercaOrdine";
+}
+
+<h1>CercaOrdine</h1>
+<div class="container">
+    @*<@*div class="input-group">
+        Codice : <input type="text" name="fname"><br>
+        Descrizione :   <input type="text" name="lname"><br>
+        <li>@Html.ActionLink("Home","Index","Home")</li>
+        @Html.ActionLink("XYZ","CercaOrdine1",new {@id = ""  })
+    </div>*@
+    <div>
+        @using(Html.BeginForm("Cerca","Home",FormMethod.Post)) {
+        @Html.TextBox("Codice",null,new { placeholder = "codice da cercare" })
+        @Html.TextBox("Descr",null,new { placeholder = "descrizione da cercare" })
+        <input type="submit" value="Cerca">
+}
+    </div>
+</div>
+

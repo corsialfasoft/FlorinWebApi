@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "ListProd";
+}
+
+<h1>ListProd</h1>
+<div class=" container">
+    <ul class="list-group">
+        @foreach(var product in ViewBag.prodotti) {
+            <li class="list-group-item">
+                <span class="badge">
+                    @Html.ActionLink("DETTAGLI","Singolo",new { id = product.ID })
+                </span>
+                @product.ID - @product.Descr
+            </li>
+        }
+    </ul>
+</div>
